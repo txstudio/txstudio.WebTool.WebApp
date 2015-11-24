@@ -1,0 +1,20 @@
+﻿
+<h3>請輸入 Transact-SQL 指令碼</h3>
+
+@using (Html.BeginForm("ParameterCmdTextBuilder", "Tool", FormMethod.Post))
+{
+    <div class="form-group">
+        <label for="cmd">Transact-SQL 指令碼</label>
+        <textarea class="form-control" rows="10" name="cmd" id="cmd"></textarea>
+    </div>
+
+    <div style="text-align:center">
+        <button type="submit" class="btn btn-default">建立 C# 指令碼</button>
+    </div>
+
+    <div class="form-group">
+        <label for="result">CSharp 指令碼</label>
+        <textarea class="form-control" rows="10" id="result">@(ViewBag.CSharpCode)</textarea>
+    </div>
+}
+
